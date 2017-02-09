@@ -5,8 +5,8 @@
 /**
  * main - main initial block
  * Function: prints statement based on if random number is greater, less then
- * or equal to zero
- * Return: Always 0 (Success)
+ *
+ * Return: 0 (Sucess)
 **/
 int main(void)
 {
