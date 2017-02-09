@@ -4,11 +4,12 @@
 /**
 * main - print string
 *
-* Return: Always 1 (Success)
+* Return: 1 (Success)
 **/
 int main(void)
 {
-	int st = strlen("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"); 
-	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", size);
+int byte = strlen("and that piece of art is useful - Dora Korpar, 2015-10-19");
+
+write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19", byte);
 	return (1);
 }
