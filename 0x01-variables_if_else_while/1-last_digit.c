@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+
 /**
   * main - main initial block
   * Function: Takes last number and compares values
   * Return: Always 0 (Success)
 **/
+
 int main(void)
 {
 	int n;
@@ -28,5 +30,5 @@ int main(void)
 	{	printf("Last digit %d is %d and is 0\n", n, ln);
 
 	}
-		return (0);
+	return (0);
 }
