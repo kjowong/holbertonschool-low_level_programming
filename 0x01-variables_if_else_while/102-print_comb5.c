@@ -12,25 +12,21 @@ int main(void)
 	{
 		for (j = 0; j < 100; j++)
 		{
-		if (i < i)
+		if (j < i)
 		{
 		continue;
 		}
-		putchar(i / 10 % 10 + 48);
-		putchar(i % 10 + 48);
+			putchar(i / 10 % 10 + 48);
+			putchar(i % 10 + 48);
 
-		putchar(' ');
-
-
+			putchar(' ');
 
 			putchar(j / 10 % 10 + 48);
 			putchar(j % 10 + 48);
 			putchar(',');
 			putchar(' ');
 		}
-		}
-
-
+	}
 
 	putchar('\n');
 	return (0);
