@@ -1,19 +1,23 @@
 #include <stdio.h>
+
+/* This program prints characters from 0 to 9 with
+    * the help of putchar function.
+     */
+
 /**
-  * main - initial block
-  *
-  * Return: 0
-**/
+   * main - Entry point
+    *
+     * Return: Always 0 (Success)
+      */
 int main(void)
 {
-	int i = 0;
+		int i;
 
-	while (i < 10)
-	{
-		putchar(i % 10 + '0');
-		i++;
-	}
-	putchar('\n');
-	return (0);
+		for (i = 0; i < 10; i++)
+		{
+			putchar(i + '0');
+		}
+
+		putchar('\n');
+		return (0);
 }
-
