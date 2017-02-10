@@ -1,18 +1,19 @@
 #include <stdio.h>
 /**
-  * main - Entry point
+  * main - initial block
   *
-  * Return: Always 0 (Success)
- */
+  * Return: 0
+**/
 int main(void)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i < 10; i++)
+	while (i < 10)
 	{
-	putchar(i + '0');
+		putchar(i % 10 + '0');
+		i++;
 	}
-
 	putchar('\n');
 	return (0);
 }
+
