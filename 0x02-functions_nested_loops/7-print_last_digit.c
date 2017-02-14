@@ -6,7 +6,7 @@
   */
 int print_last_digit(int n)
 {
- int ln;
+	 int ln;
 
 	 if (n >= 0)
 	 {
@@ -20,5 +20,5 @@ int print_last_digit(int n)
 		_putchar(ln + '0');
 		return ln;
 	 }
-	 return (0);
+	 return (n);
 }
