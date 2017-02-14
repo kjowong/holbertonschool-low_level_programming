@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <holberton.h>
+#include "holberton.h"
 /**
   * main - initial block
   *
@@ -7,7 +6,15 @@
   **/
 int main(void)
 {
+	char holberton[] = "Holberton";
 
-	printf("%s Holberton\n");
+	int c = 0;
+
+	while (c < 10)
+	{
+		_putchar(holberton[c]);
+		c++;
+	}
+	_putchar('\n');
 	return (0);
 }
