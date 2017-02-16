@@ -11,9 +11,9 @@ int main(void)
 	first = 1;
 	second = 2;
 	next = 0;
-	even = 0;
+	even = 2;
 
-	while (next < 4000000)
+	while (next <= 4000000)
 	{
 		next = first + second;
 		first = second;
@@ -25,5 +25,4 @@ int main(void)
 	}
 	printf("%lu\n", even);
 	return (0);
-
 }
