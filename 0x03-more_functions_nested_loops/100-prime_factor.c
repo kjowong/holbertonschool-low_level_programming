@@ -2,21 +2,21 @@
 /**
   * main - initial block
   * @void: no argument
-  *
+  * Return: 0
   */
 int main(void)
 {
-	int i, j;
+	unsigned long number = 612852475148;
+	unsigned long i = 2;
 
-	for (i = 2; i <= i; i++)
+	while (i < number)
 	{
-		if(n % 1 == 0)
+		if (number % i == 0)
 		{
-			printf("%d", i);
-			n = n / i;
-			--i;
+			number = number / i;
 		}
+		i++;
 	}
-
-
+	printf("%lu\n", i);
+	return (0);
 }
