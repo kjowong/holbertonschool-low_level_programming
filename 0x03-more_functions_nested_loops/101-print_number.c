@@ -6,33 +6,36 @@
   */
 void print_number(int n)
 {
+	int x = n;
+	int i, j, div;
+
+	div = 1;
 
 	if (n < 0)
 	{
-		n = n * -1;
+		x = x * -1;
 		_putchar('-');
 	}
-	if (n < 9)
+	if (n == 0)
 	{
-		_putchar(n + '0');
+		_putchar('0');
 	}
-	else if (n > 9 && n <= 99)
+
+	for (i = 1; x > 0; i++)
 	{
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
+		x /= 10;
 	}
-	else if (n > 99 && n <= 999)
-	{
-		_putchar(n / 100 + '0');
-		_putchar(n / 10 % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else if (n > 999 && n <= 1024)
-	{
-		_putchar(n / 1000 + '0');
-		_putchar(n / 100 % 10 + '0');
-		_putchar(n / 10 % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
+		for (j = 0; j < i - 1; j++)
+		{	div *= 10;
+
+
+			while (div >= i)
+			{
+				_putchar(x / div + '0');
+				n = n % div;
+				div = div / 10;
+
+			}
+		}
 
 }
