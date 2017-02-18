@@ -6,36 +6,38 @@
   */
 void print_number(int n)
 {
-	int x = n;
 	int i, j, div;
+	int x = n;
 
-	div = 1;
+	div = 10;
 
 	if (n < 0)
 	{
 		x = x * -1;
 		_putchar('-');
 	}
-	if (n == 0)
+	else if (n == 0)
 	{
 		_putchar('0');
 	}
-
-	for (i = 1; x > 0; i++)
+	else
 	{
-		x /= 10;
-	}
-		for (j = 0; j < i - 1; j++)
-		{	div *= 10;
-
-
-			while (div >= i)
+		for (i = 1; x > 0; i++)
+		{
+			x /= 10;
+		}
+			for (j = 0; j < i - 1; j++)
 			{
-				_putchar(x / div + '0');
+				div *= 10;
+
+
+			while (div >= 1)
+			{
+				_putchar(n / div + '0');
 				n = n % div;
 				div = div / 10;
 
 			}
 		}
-
+	}
 }
