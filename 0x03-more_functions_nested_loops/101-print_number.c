@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
-  *
-  *
+  * print_number - print numbers out
+  * @n: takes in an integer
   *
   */
 void print_number(int n)
@@ -10,10 +10,9 @@ void print_number(int n)
 	if (n < 0)
 	{
 		n = n * -1;
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
+		_putchar('-');
 	}
-	else if (n < 9)
+	if (n < 9)
 	{
 		_putchar(n + '0');
 	}
@@ -25,14 +24,14 @@ void print_number(int n)
 	else if (n > 99 && n <= 999)
 	{
 		_putchar(n / 100 + '0');
-		_putchar(n / 10 + '0');
+		_putchar(n / 10 % 10 + '0');
 		_putchar(n % 10 + '0');
 	}
 	else if (n > 999 && n <= 1024)
 	{
 		_putchar(n / 1000 + '0');
-		_putchar(n / 100 + '0');
-		_putchar(n / 10 + '0');
+		_putchar(n / 100 % 10 + '0');
+		_putchar(n / 10 % 10 + '0');
 		_putchar(n % 10 + '0');
 	}
 
