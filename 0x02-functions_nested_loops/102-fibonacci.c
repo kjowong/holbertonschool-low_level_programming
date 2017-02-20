@@ -6,21 +6,21 @@
   */
 int main(void)
 {
-	unsigned long int curr, prev, sum, counter;
-
-	prev = 1;
-	curr = 2;
-	sum = 0;
+	long int counter;
+	long int curr = 2;
+	long int prev = 1;
+	long int sum = 0;
 
 	printf("%lu, ", prev);
 	printf("%lu, ", curr);
 
-	for (counter = 2; counter < 50; counter++)
+	for (counter = 3; counter < 49; counter++)
 	{
 		sum = prev + curr;
 		prev = curr;
 		curr = sum;
-		if (counter != 49)
+
+		if (counter < 48)
 		{
 			printf("%lu, ", sum);
 		}
