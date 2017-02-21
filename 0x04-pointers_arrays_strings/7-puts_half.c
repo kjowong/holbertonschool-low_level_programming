@@ -10,7 +10,9 @@ void puts_half(char *str)
 
 	length = string_length(str);
 
-	for (i = ((length - 1) / 2) + 1; i <= length; i++)
+	length = length + 1;
+
+	for (i = length / 2 ; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
 	}
