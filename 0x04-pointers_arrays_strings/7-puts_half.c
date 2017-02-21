@@ -6,32 +6,44 @@
   */
 void puts_half(char *str)
 {
-	int i, half;
-	int c = 0;
 
-	while (str[c] != '\0')
+	int i, length;
+
+	length = string_length(str);
+
+	if (length % 2 == 1)
 	{
-		c++;
-	}
-
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (str[c] % 2 == 1)
+		for (i = (length - 1) / 2; i < length; i++)
 		{
-			_putchar(str[i] - 1);
+			_putchar(str[i]);
 		}
-		else
+	}
+	else
+	{
+		for (i = length / 2; i < length; i++)
 		{
-			half = str[c] / 2;
-			for (j = 0; j < half; j++)
-			{
-				temp = str[c];
-				str[i] = temp;
-			}
-			temp[i] = '\0';
-			_putchar(half);
+			_putchar(str[i]);
 		}
 	}
 	_putchar('\n');
 }
+
+/**
+  * string_length - function to return string length
+  * @s: takes in a string
+  * Return: i - string length
+  */
+
+int string_length(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+
+}
+
+
