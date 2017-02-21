@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-  * void puts2 - prints one character out of two
+  * puts2 - prints one character out of two
   * @str: takes in a string
   *
   */
