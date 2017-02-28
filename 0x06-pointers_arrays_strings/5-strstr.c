@@ -27,10 +27,14 @@ char *_strstr(char *haystack, char *needle)
 				break;
 			}
 		}
+		if (needle[j] == '\0')
+		{
+				return (haystack);
+		}
 	}
-	if (needle[j] == '\0' || haystack[i] != '\0')
+	if (haystack[i] == '\0')
 	{
-		return (haystack);
+		return (NULL);
 	}
 	return (NULL);
 }
