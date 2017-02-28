@@ -10,7 +10,7 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
 
-	if (needle == NULL && haystack == NULL)
+	if (needle == NULL || haystack == NULL)
 	{
 		return (NULL);
 	}
@@ -30,7 +30,7 @@ char *_strstr(char *haystack, char *needle)
 	}
 	if (needle[j] == '\0')
 	{
-			return (haystack);
+			return (&haystack[i]);
 	}
 	else if (haystack[i] == '\0')
 	{
