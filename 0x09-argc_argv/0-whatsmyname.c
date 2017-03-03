@@ -1,11 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
-  *
-  *
-  *
+  * main - entry point
+  * @argc: takes in string
+  * @argv: takes in array
+  * Return: 0
   */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
