@@ -11,26 +11,23 @@
   */
 int main(int argc, char *argv[])
 {
-	int i, result;
+	int i, j, result;
 
 	result = 0;
 
-	if (argc == 1)
-	{
-		printf("0\n");
-		return (0);
-	}
 	for (i = 1; i < argc; i++)
 	{
-		if (_isnumber(argv[i]) == 0)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-
-			result += atoi(argv[i]);
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
+			if (isdigit(argv[i][j]) == 0)
+			{
+				result += atoi(argv[i]);
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 	}
 	printf("%d\n", result);
@@ -42,7 +39,7 @@ int main(int argc, char *argv[])
   * @num: takes in a number
   * Return: 0 if succeed and 1 if fail
   */
-int _isnumber(char *num)
+/**int _isnumber(char *num)
 {
 	int i;
 
@@ -60,4 +57,4 @@ int _isnumber(char *num)
 		}
 	}
 	return (1);
-}
+}**/
