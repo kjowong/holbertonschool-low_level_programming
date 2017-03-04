@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
   * main - entry point
   * @argc: takes in arguments
@@ -9,20 +10,13 @@
   */
 int main(int argc, char *argv[])
 {
-	int i, result, counter;
+	int i, result;
 
 	result = 0;
 
-	/**if (argc == 1)
-	{
-		printf("0\n");
-		return (0);
-	}
-	**/
-
 	for (i = 1; i < argc; i++)
 	{
-		if (_isdigit(argv[i] == 0))
+		if (_isnumber(argv[i]) == 0)
 		{
 
 			result += atoi(argv[i]);
@@ -37,11 +31,27 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
-int _isdigit(char c)
+/**
+  * _isnumber - checks if a number
+  * @num: takes in a number
+  * Return: 0 if succeed and 1 if fail
+  */
+int _isnumber(char *num)
 {
-	if (c >= '0' && c <= '9')
+	int i;
+
+	i = 0;
+
+	while (num[i] != '\0')
 	{
-		return (0);
+		if (isdigit(num[i]) == 0)
+		{
+			i++;
+		}
+		else
+		{
+			return (0);
+		}
 	}
 	return (1);
 }
