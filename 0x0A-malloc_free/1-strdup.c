@@ -8,7 +8,7 @@
 
 int _strlen(char *s)
 {
-	int i;
+	int i = 0;
 
 	while (s[i] != '\0')
 	{
@@ -27,14 +27,14 @@ char *_strdup(char *str)
 	char *nstr;
 	unsigned int i, length;
 
+	length = _strlen(str);
+
+	nstr = malloc(length * sizeof(char));
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-
-	length = _strlen(str);
-
-	nstr = malloc(length * sizeof(char));
 
 	for (i = 0; i < length; i++)
 	{
