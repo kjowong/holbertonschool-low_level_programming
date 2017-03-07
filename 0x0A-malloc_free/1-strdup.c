@@ -14,7 +14,6 @@ int _strlen(char *s)
 	{
 		i++;
 	}
-	i++;
 	return (i);
 }
 /**
@@ -44,6 +43,7 @@ char *_strdup(char *str)
 	{
 		*(nstr + i) = *(str + i);
 	}
+	nstr[i] = '\0';
 	return (nstr);
 
 }
