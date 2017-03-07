@@ -12,10 +12,10 @@ int main(int argc, char *argv[])
 	int cent, counter;
 
 	if (argc != 2)
+	{
 		printf("Error\n");
 		return (1);
-
-
+	}
 	cent = atoi(argv[1]);
 	counter = 0;
 
