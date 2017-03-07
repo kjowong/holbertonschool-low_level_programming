@@ -35,7 +35,10 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-
+	if (nstr == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < length; i++)
 	{
 		*(nstr + i) = *(str + i);
