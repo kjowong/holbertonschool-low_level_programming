@@ -1,6 +1,21 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
+  *
+  *
+  *
+  */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+/**
   * argstostr - concats all arguments of program
   * @ac: takes in arguments
   * @av: array of arguments
@@ -10,7 +25,8 @@ char *argstostr(int ac, char **av)
 {
 	char *nstr;
 
-	int i, j, length, all_args;
+	int i, j, k, all_args;
+	all_args = 0;
 
 	if (ac == 0 || av == NULL)
 	{
@@ -18,30 +34,25 @@ char *argstostr(int ac, char **av)
 	}
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0, length = 0; av[i][j] != '\0'; j++, length++)
-		{
-			;
-		}
-		length++;
+		all_args += _strlen(av[i]) + 1;
 	}
-	length++;
 
-	nstr = malloc(sizeof(char) * length + 1);
+	nstr = malloc(sizeof(char) * all_args + 1);
 
 	if (nstr == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; av[i] != '\0'; i++)
+	for (i = 0; i < ac; i++)
 	{
 
-		for (j = 0, all_args = 0; av[i][j] != '\0'; j++, all_args++)
+		for (j = 0, k = 0; av[i][j] != '\0'; j++, k++)
 		{
-			nstr[all_args] = av[i][j];
+			nstr[k] = av[i][j];
 		}
-		nstr[all_args] = '\n';
-		all_args++;
+		nstr[k] = '\n';
+		k++;
 	}
-	nstr[all_args] = '\0';
+	nstr[k] = '\0';
 	return (nstr);
 }
