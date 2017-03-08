@@ -39,6 +39,7 @@ char *argstostr(int ac, char **av)
 		for (j = 0, all_args = 0; av[i][j] != '\0'; j++, all_args++)
 		{
 			nstr[all_args] = av[i][j];
+			nstr[all_args] = '\n';
 		}
 	}
 	nstr[all_args] = '\0';
