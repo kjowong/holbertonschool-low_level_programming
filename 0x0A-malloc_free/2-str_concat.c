@@ -25,13 +25,15 @@ int _strlen(char *s)
   */
 char *str_concat(char *s1, char *s2)
 {
-	char *nstr;
+	char *nstr, *empty;
 
 	int i, j, str1, str2;
 
+	empty = "";
+
 	if (s1 == NULL)
 	{
-		s1 = "";
+		s1 = empty;
 	}
 	else
 	{
@@ -39,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 == NULL)
 	{
-		s2 = "";
+		s2 = empty;
 	}
 	else
 	{
