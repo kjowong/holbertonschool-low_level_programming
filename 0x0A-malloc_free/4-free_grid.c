@@ -3,7 +3,7 @@
 /**
   * free_grid - free grid space
   * @grid: takes in the grid from #3
-  * @height takes in the height
+  * @height: takes in the height
   *
   */
 void free_grid(int **grid, int height)
@@ -13,10 +13,13 @@ void free_grid(int **grid, int height)
 	if (grid == NULL || grid == 0)
 	{
 		return;
-	};
-	for (i = 0; i < height; i++)
-	{
-		free(grid[i]);
 	}
-	free(grid);
+	else
+	{
+		for (i = 0; i < height; i++)
+		{
+			free(grid[i]);
+		}
+		free(grid);
+	}
 }
