@@ -1,9 +1,9 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
-  *
-  *
-  *
+  * _strlen - returns string length
+  * @s: takes in string
+  * Return: string length
   */
 int _strlen(char *s)
 {
@@ -26,6 +26,7 @@ char *argstostr(int ac, char **av)
 	char *nstr;
 
 	int i, j, k, all_args;
+
 	all_args = 0;
 
 	if (ac == 0 || av == NULL)
