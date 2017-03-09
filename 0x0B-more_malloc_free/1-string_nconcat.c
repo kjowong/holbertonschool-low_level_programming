@@ -29,22 +29,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j, str1 = 0, str2 = 0;
 
 	if (s1 == NULL)
-	{
 		s1 = empty;
-	}
 	else
-	{
 		str1 = _strlen(s1);
-	}
 	if (s2 == NULL)
-	{
 		s2 = empty;
-	}
 	else
-	{
 		str2 = _strlen(s2);
-
-	}
 	nstr = malloc((str1 * sizeof(char)) + (str2 * sizeof(char)) + 1);
 	if (nstr == NULL)
 	{
