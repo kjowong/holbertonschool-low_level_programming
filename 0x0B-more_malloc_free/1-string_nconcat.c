@@ -54,10 +54,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		nstr[i] = s1[i];
 	}
-	for (j = 0; j < n && s2[j] != '\0'; j++, i++)
+	if (n >= str2)
 	{
-		nstr[i] = s2[j];
+		for (j = 0; s2[j] != '\0'; j++)
+		{
+			nstr[i] = s2[j];
+		}
+		nstr[i] = '\0';
+		return (nstr);
 	}
-	nstr[i] = '\0';
-	return (nstr);
+	else
+	{
+		for (j = 0; j < n && s2[j] != '\0'; j++, i++)
+		{
+			nstr[i] = s2[j];
+		}
+		nstr[i] = '\0';
+		return (nstr);
+	}
 }
