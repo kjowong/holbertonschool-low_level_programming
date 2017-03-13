@@ -1,7 +1,6 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 int _putchar(char c);
-#endif /* HOLBERTON_H */
 /**
   * struct dog - dog structure
   * @name: name of dog
@@ -17,3 +16,4 @@ struct dog
 	float age;
 	char *owner;
 };
+#endif /* HOLBERTON_H */
