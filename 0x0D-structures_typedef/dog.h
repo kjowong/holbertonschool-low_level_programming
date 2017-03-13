@@ -1,10 +1,6 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
-int _putchar(char c);
-void init_dog(struct dog *d, char *name, float age, char *owner);
-void print_dog(struct dog *d);
-dog_t *new_dog(char *name, float age, char *owner);
-void free_dog(dog_t *d);
+#ifndef DOG_H
+#define DOG_H
+
 /**
   * struct dog - dog structure
   * @name: name of dog
@@ -14,10 +10,15 @@ void free_dog(dog_t *d);
   * Description: dog structure with 3 members
   *
   */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
-#endif /* HOLBERTON_H */
+} dog_t;
+int _putchar(char c);
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+#endif /* DOG_H */
