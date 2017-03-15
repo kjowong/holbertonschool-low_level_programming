@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include "3-calc.h"
 /**
-  *
-  *
-  *
+  * main - initial entry
+  * @argc: takes in arguments
+  * @argv: number of args
+  * Return: 0
   */
 int main(int argc, char **argv)
 {
