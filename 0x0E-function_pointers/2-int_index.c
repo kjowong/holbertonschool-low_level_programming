@@ -4,7 +4,7 @@
   * @array: takes in array
   * @size: takes in size
   * @cmp: function pointer
-  * Return: 0
+  * Return: -1
   */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -22,5 +22,5 @@ int int_index(int *array, int size, int (*cmp)(int))
 			return (i);
 		}
 	}
-	return (0);
+	return (-1);
 }
