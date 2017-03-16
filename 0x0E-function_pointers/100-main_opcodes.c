@@ -25,12 +25,12 @@ int main(int argc, char **argv)
 	}
 	if (arg > 0)
 	{
-		for (i = 0; i < arg; i++)
+		for (i = 0; i < (arg - 1); i++)
 		{
 			printf("%02hhx ", ((char *)main)[i]);
 		}
+		printf("%02hhx\n", ((char *)main)[i]);
 	}
-	printf("\n");
 	return (0);
 }
 
