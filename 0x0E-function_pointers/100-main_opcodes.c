@@ -8,7 +8,7 @@
   */
 int main(int argc, char **argv)
 {
-	int i, arg;
+	int i, bytes;
 
 	if (argc != 2)
 	{
@@ -16,16 +16,16 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	arg = atoi(argv[1]);
+	bytes = atoi(argv[1]);
 
-	if (arg < 0)
+	if (bytes < 0)
 	{
 		printf("Error\n");
 		return (2);
 	}
-	if (arg > 0)
+	if (bytes > 0)
 	{
-		for (i = 0; i < (arg - 1); i++)
+		for (i = 0; i < (bytes - 1); i++)
 		{
 			printf("%02hhx ", ((char *)main)[i]);
 		}
