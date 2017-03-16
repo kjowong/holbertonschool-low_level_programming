@@ -23,9 +23,12 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (2);
 	}
-	for (i = 0; i < arg; i++)
+	if (arg > 0)
 	{
-		printf("%02hhx ", ((char *)main)[i]);
+		for (i = 0; i < arg; i++)
+		{
+			printf("%02hhx ", ((char *)main)[i]);
+		}
 	}
 	printf("\n");
 	return (0);
