@@ -23,14 +23,14 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (2);
 	}
-	if (bytes > 0)
+	for (i = 0; i < (bytes - 1); i++)
 	{
-		for (i = 0; i < (bytes - 1); i++)
+		if (bytes != 0)
 		{
 			printf("%02hhx ", ((char *)main)[i]);
 		}
-		printf("%02hhx\n", ((char *)main)[i]);
 	}
+	printf("%02hhx\n", ((char *)main)[i]);
 	return (0);
 }
 
