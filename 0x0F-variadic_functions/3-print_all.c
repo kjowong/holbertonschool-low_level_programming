@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 /**
   * print_char - print char
+  * @str: string pointer
   * @valist: takes in a list
   */
 void print_char(char *str, va_list valist)
@@ -9,6 +10,7 @@ void print_char(char *str, va_list valist)
 }
 /**
   * print_int - print int
+  * @str: string pointer
   * @valist: takes in a list
   */
 void print_int(char *str, va_list valist)
@@ -17,6 +19,7 @@ void print_int(char *str, va_list valist)
 }
 /**
   * print_float - print float
+  * @str: string pointer
   * @valist: takes in a list
   */
 void print_float(char *str, va_list valist)
@@ -25,6 +28,7 @@ void print_float(char *str, va_list valist)
 }
 /**
   * print_string - print a string
+  * @str: string pointer
   * @valist: takes in a list
   */
 void print_string(char *str, va_list valist)
