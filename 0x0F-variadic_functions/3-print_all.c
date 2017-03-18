@@ -3,31 +3,31 @@
   * print_char - print char
   * @valist: takes in a list
   */
-void print_char(va_list valist)
+void print_char(char *str, va_list valist)
 {
-	printf("%c", va_arg(valist, int));
+	printf("%s%c", str, va_arg(valist, int));
 }
 /**
   * print_int - print int
   * @valist: takes in a list
   */
-void print_int(va_list valist)
+void print_int(char *str, va_list valist)
 {
-	printf("%d", va_arg(valist, int));
+	printf("%s%d", str, va_arg(valist, int));
 }
 /**
   * print_float - print float
   * @valist: takes in a list
   */
-void print_float(va_list valist)
+void print_float(char *str, va_list valist)
 {
-	printf("%f", va_arg(valist, double));
+	printf("%s%f", str, va_arg(valist, double));
 }
 /**
   * print_string - print a string
   * @valist: takes in a list
   */
-void print_string(va_list valist)
+void print_string(char *str, va_list valist)
 {
 	char *temp;
 
@@ -36,7 +36,7 @@ void print_string(va_list valist)
 	{
 		temp = "(nil)";
 	}
-	printf("%s", temp);
+	printf("%s%s", str, temp);
 }
 /**
   * print_all - prints everything
@@ -69,12 +69,11 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == p[j].c[0])
 			{
-				printf("%s", str);
-				p[j].f(valist);
+				p[j].f(str, valist);
+				str = ", ";
 			}
 			j++;
 		}
-		str = ", ";
 		i++;
 	}
 	printf("\n");
