@@ -6,19 +6,13 @@
  */
 void free_list(list_t *head)
 {
-	int i = 0;
-
 	list_t *walker;
 
-	while (i != 0)
+	while (head != NULL)
 	{
-		if (head != NULL)
-		{
 			walker = head;
 			head = walker->next;
 			free(walker->str);
 			free(walker);
-		}
-	i++;
 	}
 }
