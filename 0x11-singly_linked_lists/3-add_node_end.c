@@ -7,7 +7,7 @@
  */
 int _strlen(const char *s)
 {
-	int i;
+	int i = 0;
 
 	while (s[i] != '\0')
 	{
@@ -32,17 +32,16 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	newNode->str = strdup(str);
+	if (newNode->str == NULL)
+	{
+		free(newNode);
+		return (NULL);
+	}
 	newNode->len = _strlen(str);
 	if (*head == NULL)
 	{
 		*head = newNode;
 		newNode->next = NULL;
-	}
-	walker = malloc(sizeof(list_t));
-	if (walker == NULL)
-	{
-		free(newNode);
-		return (NULL);
 	}
 	walker = *head;
 	while (walker->next != NULL)
