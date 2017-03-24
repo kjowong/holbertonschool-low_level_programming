@@ -41,6 +41,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	walker = malloc(sizeof(list_t));
 	if (walker == NULL)
 	{
+		free(newNode);
 		return (NULL);
 	}
 	walker = *head;
