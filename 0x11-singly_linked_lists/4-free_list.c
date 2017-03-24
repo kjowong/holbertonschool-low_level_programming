@@ -1,10 +1,8 @@
 #include "lists.h"
 #include <string.h>
 /**
- * add_node_end - add node to the end
- * @head: pointer to a pointer
- * @str: takes in a string
- * Return: pointer to the end
+ * free_list - free memory
+ * @head: pointer to type list_t
  */
 void free_list(list_t *head)
 {
