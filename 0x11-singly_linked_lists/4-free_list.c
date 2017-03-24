@@ -10,9 +10,9 @@ void free_list(list_t *head)
 
 	while (head != NULL)
 	{
-			walker = head;
-			head = walker->next;
-			free(walker->str);
-			free(walker);
+		walker = head;
+		head = walker->next;
+		free(walker->str);
+		free(walker);
 	}
 }
