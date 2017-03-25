@@ -1,6 +1,6 @@
-section .text ; section with text
-			global  main ; declaring global main function, entry point
 	        extern  printf ; delaring function printf
+			section .text ; section with text
+			global  main ; declaring global main function, entry point
 
 main: ;assembling main function
 	        push    rbx	; push to stack
@@ -14,6 +14,6 @@ main: ;assembling main function
 
 			mov rax, 1 ;Exit to stdout
 			ret ; Return
-section .data
+			section .data
 			msg: 	db "Hello, Holberton", 0 ;delare message end in null terminator
-			fmt:	db "%s", 10, 0 ;delcar format, follow by newline(10) and null terminator
+			fmt:	db "%s", 10, 0 ;delcare format, follow by newline(10) and null terminator
