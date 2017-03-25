@@ -11,11 +11,11 @@ main: ;assembling main function
 
 	mov     rdi, fmt	; move format to the register rdi
 	mov     rsi, msg ; move message to register rsi
-	mov     rax, 1 ; run syscall 1 to write function
+	mov     rax, 0 ; run syscall 1 to write function
 	       	call    printf	 ; call the printf function
 
 			pop rbp	; pop stack
 
-	mov rax, 1 ;Exit to stdout
+	mov rax, 0 ;Exit to stdout
 	ret ; Return
 
