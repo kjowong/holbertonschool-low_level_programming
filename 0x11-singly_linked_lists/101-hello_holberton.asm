@@ -14,6 +14,5 @@ main: ;assembling main function
 	       	call    printf	 ; call the printf function
 
 			pop rbp	; pop stack
-
 	ret ; Return
 
