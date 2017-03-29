@@ -14,5 +14,6 @@ main: ;assembling main function
 	       	call    printf	 ; call the printf function
 
 			pop rbp	; pop stack
+	mov rax, 0 ; Exit 0 for prinft
 	ret ; Return
 
