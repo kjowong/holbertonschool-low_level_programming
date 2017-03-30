@@ -8,17 +8,16 @@
   */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int counter = 0;
+	int counter;
 	int index = (sizeof(unsigned long int) * 8) - 1;
 	unsigned long int num = n ^ m;
 
-	while (index >= 0)
+	for (counter = 0; index >= 0; index--)
 	{
 		if (((num >> index) & 1) == 1)
 		{
 			counter += 1;
 		}
-		index--;
 	}
 	return (counter);
 }
