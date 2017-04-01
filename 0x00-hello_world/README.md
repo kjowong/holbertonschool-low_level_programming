@@ -50,6 +50,6 @@ Acknowledgement to Holberton School for providing a test file
 There are no known bugs at the time
 
 ### Author
-*Kimberly Wong* - [Github](https://github.com/kjowong) || [Twitter](https://twitter.com/kjowong) || [email](kimberly.wong@holbertonschool.com)
+*Kimberly Wong* - [Github](https://github.com/kjowong) || [Twitter](https://twitter.com/kjowong) || [Email](kimberly.wong@holbertonschool.com)
 
 #### Feedback and contributors welcomed.
