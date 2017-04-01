@@ -29,7 +29,7 @@ $ chmod a+x <FILE-NAME>
 ```
 The script command above gives all users executable permissions for the script file. Once that is done, you can run the script command like so:
 ```
-$ ./0-preprocessr
+$ ./0-preprocessor
 ```
 
 ### For C files
@@ -37,7 +37,7 @@ To run the C files, you need to use the gcc command to compile, like so:
 ```
 $ gcc -Wall <FILE-NAME>
 ```
-Example output for **5-printf.c**. Note that `a.out` is the default output file when when C programs are compiled.
+Example output for **5-printf.c**. Note that `a.out` is the default output file when C programs are compiled.
 ```
 $ gcc -Wall 5-printf.c
 $ ./a.out
