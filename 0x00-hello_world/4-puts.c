@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
   * main - prints string
-  *
   * Return: Always 0 (Sucess)
 */
 int main(void)
