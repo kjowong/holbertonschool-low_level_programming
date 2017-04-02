@@ -31,11 +31,6 @@ First step is to clone the repository into your directory
 ```bash
 $ https://github.com/kjowong/holbertonschool-low_level_programming.git
 ```
-There are two ways to use the C functions in your code.
-First step is to clone the repository into your directory
-```bash
-$ https://github.com/kjowong/holbertonschool-low_level_programming.git
-```
 Once that is done, you can create a static library or use the -I in gcc
 
 ### Compile with a static library for 0x03-more_functions_nested_loops
@@ -84,6 +79,7 @@ $ A: 1
 ```
 ## Notes
 Acknowledgement to Holberton School for providing the test files.
+
 *Your program will be compiled with this command: `gcc -Wall -pedantic -Werror -Wextra 100-prime_factor.c -o 100-prime_factor -lm`
 
 ## How to Use
