@@ -32,27 +32,27 @@ Once cloned over, the repository will contain the following files:
 ## How to Use
 There are two ways to use the C functions in your code.
 First step is to clone the repository into your directory
-```
+```bash
 $ https://github.com/kjowong/holbertonschool-low_level_programming.git
 ```
 Once that is done, you can create a static library or use the -I in gcc
 
 ### Compile with a static library for 0x02-functions_nested_loops
 Change your directory into the 0x02-functions_nested_loops directory in order to create your static library
-```
+```bash
 $ cd holbertonschool-low_level_programming
 $ cd 0x02-functions_nested_loops
 ```
 Compile all the `.c` files in 0x02-functions_nested_loops
-```
+```bash
 gcc -Wall -Werror -Wextra -pedantic -c *.c
 ```
 All your `.c` files should also have a corresponding `.o` file. Run the following to create your static library:
-```
+```bash
 ar -rc lib<LIBRARY-NAME>.a *.o
 ```
 To run your static library with your own `YOUR-FILE.c` file, use the following command:
-```
+```bash
 gcc <YOUR-FILE>.c -L. -lib<LIBRARY-NAME> -o <OUT-NAME>
 ```
 ### Compile without a static library for 0x02-functions_nested_loops
@@ -74,7 +74,7 @@ int main(void)
  }
 ```
 This is an an example output:
-```C
+```bash
 $ abcdefghijklmnopqrstuvwxyz
 ```
 ## Notes
