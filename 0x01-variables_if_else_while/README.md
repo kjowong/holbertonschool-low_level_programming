@@ -38,7 +38,7 @@ $ ./0-positive_or_negative
 $ -520693284 is negative
 ```
 ## Notes
-Acknowledgement to Holberton School for providing the test files
+Acknowledgement to Holberton School for providing srand source code for 0 and 1
 
 ## Known Bugs
 There are no known bugs at the time
