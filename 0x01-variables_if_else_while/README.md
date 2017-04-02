@@ -11,15 +11,20 @@ Once cloned over, the repository will contain the following files:
 
 |   **File**    |  **Decription**                       |
 |---------------|---------------------------------------|
-| 0-preprocessor | script that runs a C file through the preprocessor and saves result into another file |
-| 1-compiler      | script that generates the assembly code of a C code and saves to output file |
-| 2-assembler     | script that compiles a C file but does not link             |
-| 3-name | script that compiles a C file and creates an executable |
-| 4-puts | C program that prints a string followed by a newline, uses function **puts** |
-| 5-printf.c | C program that prints a string followed by newline, uses function **printf** |
-| 6-size.c | C program that prints the size of various types in the computer it is compiled to run on |
-| 100-intel     | script that generates assembly code of a C code and saves to an output file |
-| 101-quote.c | C program that prints a string followed by a newline in standard error|
+| 0-positive_or_negative.c | Will assign a random number to var `n` each time it's executed and will print whether `+` or `-` |
+| 1-last_digit.c      | Will assign a random number to var `n` each time it's executed and will print last digit stored in `n` |
+| 2-print_alphabet.c     | Prints the alphabet in lowercase, followed by newline using _putchar |
+| 3-print_alphabets.c | Prints the alphabet in lowercase except for `q` and `e`, followed by newline using _putchar |
+| 4-print_alphabt.c | Prints the alphabet in lowercase then uppercase, followed by newline using _putchar |
+| 5-print_numbers.c | Prints all single digit numbers of base 10, followed by newline |
+| 6-print_numberz.c | Prints all single digit numbers of base 10, followed by newline, using _putchar |
+| 7-print_tebahpla.c     | Prints alphabet in lowercase in reverse, followed by newline, using _putchar |
+| 8-print_base16.c | Prints all numbers of base 16 in lowercase, followed by newline, using _putchar |
+| 9-print_comb.c | Prints all possible combos of single-digit numbers, using _putchar|
+| 10-print_comb2.c | Prints the numbers from `00` to `99`, using _putchar |
+| 100-print_comb3.c | Prints all possible combos of two digits, using _putchar |
+| 101-print_comb4.c | Prints all possible combos of three digits, using _putchar |
+| 102-print_comb5.c | Prints all possible combos of two two-digit numbers, using _putchar |
 
 ## How to Use
 ### For script files
