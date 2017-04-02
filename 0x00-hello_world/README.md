@@ -2,7 +2,7 @@
 
 This project is about starting with the C Programming Language and learning about the basics of the compiler, assembler, and as well as the most used built-in functions such as printf.
 ## Environment
-All the functions written has been tested on Ubuntu 14.05.5 LTS
+All the functions written has been tested on Ubuntu 14.05.5 LTS and compiled on gcc 4.8.4 (C90)
 
 Tests done in VirtualBox on [Ubuntu](https://atlas.hashicorp.com/ubuntu/boxes/trusty64) via [Vagrant](https://www.vagrantup.com/)(1.9.1)
 
