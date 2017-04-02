@@ -1,6 +1,6 @@
-#Hello, World in the C Programming Language
+# Variables, if, else, and While in the C Language
 
-This project is about starting with the C Programming Language and learning about the basics of the compiler, assembler, and as well as the most used built-in functions such as printf.
+This project is about nagivating and declaring variables, conditional statements, and using while loops in C.
 ## Environment
 All the functions written has been tested on Ubuntu 14.05.5 LTS
 
