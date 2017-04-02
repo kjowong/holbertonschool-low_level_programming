@@ -2,7 +2,7 @@
 
 This project is about nagivating and declaring variables, conditional statements, and using while loops in C.
 ## Environment
-All the functions written has been tested on Ubuntu 14.05.5 LTS
+All the functions written has been tested on Ubuntu 14.05.5 LTS and compiled on gcc 4.8.4 (C90)
 
 Tests done in VirtualBox on [Ubuntu](https://atlas.hashicorp.com/ubuntu/boxes/trusty64) via [Vagrant](https://www.vagrantup.com/)(1.9.1)
 
@@ -27,29 +27,18 @@ Once cloned over, the repository will contain the following files:
 | 102-print_comb5.c | Prints all possible combos of two two-digit numbers, using _putchar |
 
 ## How to Use
-### For script files
-The first step is to change the access permission, done so with the following example:
-```
-$ chmod a+x <FILE-NAME>
-```
-The script command above gives all users executable permissions for the script file. Once that is done, you can run the script command like so:
-```
-$ ./0-preprocessor
-```
-
-### For C files
 To run the C files, you need to use the gcc command to compile, like so:
 ```
-$ gcc -Wall <FILE-NAME>
+$ gcc -Wall -pedantic -Werror -Wextra <FILE-NAME> -o <FILE-OUTPUT>
 ```
-Example output for **5-printf.c**. Note that `a.out` is the default output file when C programs are compiled.
+Example output for **0-positive_or_negative.c**.
 ```
-$ gcc -Wall 5-printf.c
-$ ./a.out
-$ with proper grammar, but the outcome is a piece of art,
+$ gcc -Wall -pedantic -Werror -Wextra 0-positive_or_negative.c -o 0-positive_or_negative
+$ ./0-positive_or_negative 
+$ -520693284 is negative
 ```
 ## Notes
-Acknowledgement to Holberton School for providing a test file
+Acknowledgement to Holberton School for providing the test files
 
 ## Known Bugs
 There are no known bugs at the time
