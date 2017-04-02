@@ -27,7 +27,7 @@ Once cloned over, the repository will contain the following files:
 | 101-natural.c | Program that computes and prints the sum of all multiples of `3` or `5` below `1024` (exclued), followed by a newline |
 | 102-fibonacci.c | Program that prints the first 50 Fibonacci numbers starting with `1` and `2`, followed by a newline |
 | 103-fibonacci.c | Program that finds and prints the sum of the even-valued terms, followed by a newline |
-| 104-fibonacci.c (TO-BE-ADDED) | Program that finds and prints the first 98 Fibonacci numbers, starting with `1` and `2`, followed by a newline|
+| **104-fibonacci.c (TO-BE-ADDED)** | **Program that finds and prints the first 98 Fibonacci numbers, starting with `1` and `2`, followed by a newline**|
 
 ## How to Use
 There are two ways to use the C functions in your code.
@@ -64,7 +64,7 @@ Details To be added
 ### How to use a functon in your code
 Please see the following example when print_alphabet is implemented in your code:
 
-```
+```C
 #include <holberton.h>
 
 int main(void)
@@ -74,7 +74,7 @@ int main(void)
  }
 ```
 This is an an example output:
-```
+```C
 $ abcdefghijklmnopqrstuvwxyz
 ```
 ## Notes
