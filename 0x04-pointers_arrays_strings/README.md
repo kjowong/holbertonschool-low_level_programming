@@ -1,4 +1,4 @@
-# More Functions and Nested Loops in the C Language
+# Pointers, Arrays, and Strings in the C Language
 
 This project is about creating more functions, using function prototypes as well as implementing nested loops in C.
 ## Environment
