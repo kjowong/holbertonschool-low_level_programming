@@ -28,11 +28,11 @@ Once cloned over, the repository will contain the following files:
 
 ## How to Use
 To run the C files, you need to use the gcc command to compile, like so:
-```
+```bash
 $ gcc -Wall -pedantic -Werror -Wextra <FILE-NAME> -o <FILE-OUTPUT>
 ```
 Example output for **0-positive_or_negative.c**.
-```
+```bash
 $ gcc -Wall -pedantic -Werror -Wextra 0-positive_or_negative.c -o 0-positive_or_negative
 $ ./0-positive_or_negative 
 $ -520693284 is negative
