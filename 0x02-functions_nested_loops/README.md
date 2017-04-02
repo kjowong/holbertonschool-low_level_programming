@@ -1,4 +1,4 @@
-# Variables, if, else, and While in the C Language
+# Functions and Nested Loops in the C Language
 
 This project is about creating functions, using function prototypes as well as implementing nested loops in C.
 ## Environment
