@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
-  * main - initial block
-  * Function:
+  * main - entry block
+  * @void: no argument
   * Return: 0
 **/
 
@@ -11,8 +11,6 @@ int main(void)
 
 	for (c = 'a'; c <= 'z'; c++)
 		putchar(c);
-
 	putchar('\n');
-
 	return (0);
 }
