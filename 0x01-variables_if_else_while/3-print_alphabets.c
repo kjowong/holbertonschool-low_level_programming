@@ -1,13 +1,12 @@
 #include <stdio.h>
 /**
-  * main - initial block
-  *
+  * main - entry block
+  * @void: no argument
   * Return: 0
 **/
 int main(void)
 {
-	char c;
-	char d;
+	char c, d;
 
 	for (c = 'a'; c <= 'z'; c++)
 		putchar(c);

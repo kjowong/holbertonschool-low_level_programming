@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-
 /**
-  * main - main initial block
-  * Function: Takes last number and compares values
+  * main - entry block
+  * @void: no argument
   * Return: Always 0 (Success)
 **/
-
 int main(void)
 {
 	int n;

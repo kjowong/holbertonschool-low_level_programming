@@ -1,24 +1,18 @@
 #include <stdio.h>
 /**
-  * main - initial block
+  * main - entry block
   * @void: no argument
   * Return: 0
   */
 int main(void)
 {
-	int i = 0;
-	char c = 'a';
+	int i;
+	char c;
 
-	while (i < 10)
-	{
+	for (i = 0; i < 10; i++)
 		putchar(i % 10 + '0');
-		i++;
-	}
-	while (c < 'g')
-	{
+	for (c = 'a'; c < 'g'; c++)
 		putchar(c);
-		c++;
-	}
 	putchar('\n');
 	return (0);
 }

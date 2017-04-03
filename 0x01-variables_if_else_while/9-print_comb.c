@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-  * main - initial block
+  * main - entry block
   * @void: no argument
   * Return: 0
   **/
@@ -13,8 +13,8 @@ int main(void)
 		putchar(i % 10 + '0');
 		if (i < 9)
 		{
-		putchar(',');
-		putchar(' ');
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');

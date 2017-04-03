@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-/* more headers goes there */
 /**
- * main - main initial block
- * Function: prints statement based on if random number is greater, less then
- *
+ * main - entry block
+ * @void: no argument
  * Return: 0 (Sucess)
 **/
 int main(void)
