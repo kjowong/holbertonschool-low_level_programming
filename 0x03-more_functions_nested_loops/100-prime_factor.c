@@ -1,13 +1,12 @@
 #include <stdio.h>
 /**
-  * main - initial block
+  * main - entry block
   * @void: no argument
   * Return: 0
   */
 int main(void)
 {
-	long number = 612852475143;
-	long i;
+	long i, number = 612852475143;
 
 	for (i  = 2; i <= number; i++)
 	{
@@ -16,7 +15,6 @@ int main(void)
 			number = number / i;
 			i--;
 		}
-
 	}
 	printf("%lu\n", i);
 	return (0);

@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-  * main - initial block
+  * main - entry block
   * @void: no argument
   * Return: 0 Success
   */
@@ -16,12 +16,10 @@ int main(void)
 		else if (i % 5 == 0)
 		{
 			printf("Buzz ");
-
 		}
 		else if (i % 3 == 0)
 		{
 			printf("Fizz ");
-
 		}
 		else
 		{

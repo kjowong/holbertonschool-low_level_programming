@@ -2,7 +2,6 @@
 /**
   * print_line - function that prints a straight line
   * @n: takes in an integer
-  *
   */
 void print_line(int n)
 {
