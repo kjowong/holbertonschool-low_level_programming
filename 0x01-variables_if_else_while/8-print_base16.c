@@ -1,11 +1,9 @@
 #include <stdio.h>
-
 /**
   * main - initial block
-  *
+  * @void: no argument
   * Return: 0
-  **/
-
+  */
 int main(void)
 {
 	int i = 0;
@@ -22,6 +20,5 @@ int main(void)
 		c++;
 	}
 	putchar('\n');
-
 	return (0);
 }
