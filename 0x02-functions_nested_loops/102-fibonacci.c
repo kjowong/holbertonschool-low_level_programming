@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-  * main - initial block
+  * main - entry block
   * @void: no argument
   * Return: 0
   */
@@ -19,7 +19,6 @@ int main(void)
 		sum = prev + curr;
 		prev = curr;
 		curr = sum;
-
 		if (counter < 48)
 		{
 			printf("%lu, ", sum);
@@ -30,5 +29,4 @@ int main(void)
 		}
 	}
 	return (0);
-
 }
