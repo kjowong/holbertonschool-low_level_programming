@@ -12,22 +12,21 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-	for (len = 0; text_content[len] != '\0'; len++)
-		;
 	file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, mode);
 	if (file == -1)
 		return (-1);
-	if (text_content == NULL)
+	if (text_content != NULL)
 	{
-		close(file);
-		return (1);
+		for (len = 0; text_content[len] != '\0'; len++)
+			;
+		writeFile = write(file, text_content, len);
 	}
-	writeFile = write(file, text_content, len);
 	if (writeFile == -1)
 	{
 		close(file);
 		return (-1);
 	}
+	close(file);
 	if (close(file) == -1)
 		return (-1);
 	return (1);
