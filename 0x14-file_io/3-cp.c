@@ -1,0 +1,80 @@
+#include "holberton.h"
+#define BUFF_SIZE 1024
+/**
+  * read_error - returns error if file_from doesn't exist or you can't read it
+  * @file: pointer to a file
+  */
+void read_error(char *file)
+{
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
+	exit(98);
+}
+/**
+  * write_error - returns an error if you can't create/write to a file_to
+  * @file: pointer to a file
+  */
+void write_error(char *file)
+{
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+	exit(99);
+}
+/**
+  * close_error - return an error if you can't close a file descriptoy
+  * @file: the file descriptor value
+  */
+void close_error(int file)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
+	exit(100);
+}
+/**
+  * main - entry point
+  * @argc: number of arguments
+  * @argv: array of arguments
+  * Return: 0 success
+  */
+int main(int argc, char *argv[])
+{
+	int file_from, file_to, file_fread,
+	    file_write, file_close, file_fclose;
+	char *buffer;
+
+	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH;
+
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	file_from = open(argv[1], O_RDONLY);
+	if (file_from == -1)
+		read_error(argv[1]);
+	file_to = open(argv[2], O_CREAT | O_RDONLY | O_WRONLY | O_TRUNC, mode);
+	if (file_to == -1)
+		write_error(argv[2]);
+	buffer = malloc(sizeof(char) * BUFF_SIZE);
+	if (buffer == NULL)
+		return (-1);
+	file_fread = read(file_from, buffer, BUFF_SIZE);
+	if (file_fread == -1)
+		return (-1);
+	while (file_fread > 0)
+	{
+		file_write = write(file_to, buffer, file_fread);
+		if (file_write == -1)
+			write_error(argv[2]);
+		file_fread = read(file_from, buffer, BUFF_SIZE);
+		if (file_fread == -1)
+			read_error(argv[1]);
+	}
+	file_fclose = close(file_from);
+	if (file_fclose == -1)
+		close_error(file_fclose);
+	file_close = close(file_to);
+	if (file_close == -1)
+		close_error(file_close);
+	free(buffer);
+	return (0);
+}
+
+
