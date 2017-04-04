@@ -7,7 +7,7 @@
   */
 int create_file(const char *filename, char *text_content)
 {
-	int file = 0, writeFile = 0, closeFile, len;
+	int file, writeFile, len;
 	mode_t mode = S_IRUSR | S_IWUSR;
 
 	for (len = 0; text_content[len] != '\0'; len++)
@@ -19,19 +19,21 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content == NULL)
 	{
-		closeFile = close(file);
-		if (closeFile == -1)
+		close(file);
+		if (close(file) == -1)
 			return (-1);
 		return (1);
 	}
 	writeFile = write(file, text_content, len);
 	if (writeFile == -1)
 	{
-		closeFile = close(file);
+		close(file);
+		if (close(file) == -1)
+			return (-1);
 		return (-1);
 	}
-	closeFile = close(file);
-	if (closeFile == -1)
+	close(file);
+	if (close(file) == -1)
 		return (-1);
 	return (1);
 }
