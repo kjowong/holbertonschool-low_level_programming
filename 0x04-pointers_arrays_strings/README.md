@@ -1,6 +1,5 @@
 # Pointers, Arrays, and Strings in the C Language
-
-This project is about creating more functions, using function prototypes as well as implementing nested loops in C.
+This project is about pointers, arrays, and strings
 ## Environment
 All the functions written has been tested on Ubuntu 14.05.5 LTS and compiled on gcc 4.8.4 (C90)
 
@@ -11,35 +10,34 @@ Once cloned over, the repository will contain the following files:
 
 |   **File**    |  **Decription**                       |
 |---------------|---------------------------------------|
-| 0-isupper.c | Function that checks for an uppercase |
-| 1-isdigit.c  |  Function that checks for a digit (`0` through `9`) |
-| 2-mul.c | Function that multiples two integers|
-| 3-print_numbers.c | Function that prints the numbers, from `0` to `9`, followed by a newline |
-| 4-print_most_numbers.c | Function that prints the numbers, from `0` to `9` except for `2` and `4`, followed by a newline |
-| 5-more_numbers.c | Function that prints 10 times the numbers, from `0` to `14`, followed by a new line |
-| 6-print_line.c | Function that draws a straight line in the terminal |
-| 7-print_diagonal.c | Function that draws a diagonal line on the terminal |
-| 8-print_square.c | Function that prints a square, followed by a new line|
-| 9-fizz_buzz.c | Program that prints the numbers from 1 to 100, followed by a new line in FizzBuzz |
-| 10-print_triangle.c | Function that prints a triangle, followed by a new line |
-| 100-prime_factor.c | Program that finds and prints the largest prime factor of the number 612852475143, followed by a new line. *|
-| **101-print_number.c (TO-BE-ADDED)** | **Function that prints an integer** |
+| 0-reset_to_98.c | Function that takes a pointer to an `int` as a parameter and updates value to `98` |
+| 1-swap.c  |  Function that swaps the values of two integers |
+| 2-strlen.c | Function that returns the length of string |
+| 3-puts.c | Function that prints a string, followed by a new line to `stdout` |
+| 4-print_rev.c | Function that prints a string, in reverse, followed by a new line |
+| 5-rev_string.c | Function that reverses a string |
+| 6-puts2.c | Function that prints 1 char out of 2 of a string, followed by a new line |
+| 7-puts_half.c | Function that prints half of a string, followed by a new line |
+| 8-print_array.c | Function that prints `n` elements of an array of integers, followed by a new line |
+| 9-strcpy.c | Function that copies the string pointed to by `src`, including the null byte, to the buffer pointed to by `dest`. |
+| **100-atoi.c (TO-BE-ADDED) | Function that converts a string an integer** |
+| **101-keygen.c (TO-BE-ADDED) | Program that generates random valid passwords for the program 101-crackme** |
 
 ## How to Use
 There are two ways to use the C functions in your code.
 First step is to clone the repository into your directory
-```bash
+```bash 
 $ https://github.com/kjowong/holbertonschool-low_level_programming.git
 ```
 Once that is done, you can create a static library or use the -I in gcc
 
-### Compile with a static library for 0x03-more_functions_nested_loops
-Change your directory into the 0x03-more_functions_nested_loops directory in order to create your static library
+### Compile with a static library for 0x04-pointers_arrays_strings
+Change your directory into the 0x04-pointers_arrays_strings directory in order to create your static library
 ```bash
 $ cd holbertonschool-low_level_programming
-$ cd 0x03-more_functions_nested_loops
+$ cd 0x04-pointers_arrays_strings
 ```
-Compile all the `.c` files in 0x03-more_functions_nested_loops
+Compile all the `.c` files in 0x04-pointers_arrays_strings
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -c *.c
 ```
@@ -51,36 +49,34 @@ To run your static library with your own `YOUR-FILE.c` file, use the following c
 ```bash
 gcc <YOUR-FILE>.c -L. -lib<LIBRARY-NAME> -o <OUT-NAME>
 ```
-### Compile without a static library for 0x03-more_functions_nested_loops
-Make sure the 0x03-more_functions_nested_loops directory is in the same directory as your `YOUR-FILE.c` file and then run the following command:
+### Compile without a static library for 0x04-pointers_arrays_strings
+Make sure the 0x04-pointers_arrays_strings directory is in the same directory as your `YOUR-FILE.c` file and then run the following command:
 ```
 Details To be added
 ```
 ## Use in code 
 ### How to use a functon in your code
-Please see the following example when `_isupper()` is implemented in your code:
+Please see the following example when `void reset_to_98(int *n)` is implemented in your code:
 
 ```C
 int main(void)
 {
-    char c;
+    int n;
 
-    c = 'A';
-    printf("%c: %d\n", c, _isupper(c));
-    c = 'a';
-    printf("%c: %d\n", c, _isupper(c));
+    n = 402;
+    printf("n=%d\n", n);
+    reset_to_98(&n);
+    printf("n=%d\n", n);
     return (0);
 }
 ```
 This is an an example output:
 ```bash
-$ A: 1
-  a: 0
+$ n=402
+  n=98
 ```
 ## Notes
 Acknowledgement to Holberton School for providing the test files.
-
-*Your program will be compiled with this command: `gcc -Wall -pedantic -Werror -Wextra 100-prime_factor.c -o 100-prime_factor -lm`
 
 ## How to Use
 
