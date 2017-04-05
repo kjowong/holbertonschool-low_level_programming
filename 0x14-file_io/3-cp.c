@@ -72,12 +72,12 @@ int main(int argc, char *argv[])
 		return (-1);
 	while (file_fread > 0)
 	{
-		file_fread = read(file_from, buffer, BUFF_SIZE);
-		if (file_fread == -1)
-			read_error(argv[1]);
 		file_write = write(file_to, buffer, file_fread);
 		if (file_write == -1)
 			write_error(argv[2]);
+		file_fread = read(file_from, buffer, BUFF_SIZE);
+		if (file_fread == -1)
+			read_error(argv[1]);
 	}
 	file_fclose = close(file_from);
 	if (file_fclose == -1)
