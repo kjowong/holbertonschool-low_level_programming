@@ -56,7 +56,7 @@ Details To be added
 ```
 ## Use in code 
 ### How to use a functon in your code
-Please see the following example when `void reset_to_98(int *n)` is implemented in your code:
+Please see the following example when `reset_to_98` is implemented in your code:
 
 ```C
 int main(void)
