@@ -1,5 +1,5 @@
 #include "holberton.h"
-#define BUFF_SIZE 1024
+#define BUFF_SIZE 1204
 /**
   * read_error - returns error if file_from doesn't exist or you can't read it
   * @file: pointer to a file
