@@ -66,10 +66,10 @@ int main(int argc, char *argv[])
 		write_error(argv[2]);
 	buffer = malloc(sizeof(char) * BUFF_SIZE);
 	if (buffer == NULL)
-		return (-1);
+		return (1);
 	file_fread = read(file_from, buffer, BUFF_SIZE);
 	if (file_fread == -1)
-		return (-1);
+		read_error(argv[1]);
 	while (file_fread > 0)
 	{
 		file_write = write(file_to, buffer, file_fread);
