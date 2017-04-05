@@ -34,8 +34,10 @@ void close_error(int file)
   */
 void check_args(char *file, char *file2)
 {
-	if (file == NULL || file2 == NULL)
+	if (file == NULL)
 		read_error(file);
+	if (file2 == NULL)
+		write_error(file2);
 }
 /**
   * main - entry point
