@@ -27,6 +27,11 @@ void close_error(int file)
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
 	exit(100);
 }
+void check_args(char *file, char *file2)
+{
+	if (file == NULL || file2 == NULL)
+		read_error(file);
+}
 /**
   * main - entry point
   * @argc: number of arguments
@@ -46,6 +51,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
+	check_args(argv[1], argv[2]);
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
 		read_error(argv[1]);
@@ -53,8 +59,6 @@ int main(int argc, char *argv[])
 	if (file_to == -1)
 		write_error(argv[2]);
 	buffer = malloc(sizeof(char) * BUFF_SIZE);
-	if (buffer == NULL)
-		return (-1);
 	file_fread = read(file_from, buffer, BUFF_SIZE);
 	if (file_fread == -1)
 		return (-1);
