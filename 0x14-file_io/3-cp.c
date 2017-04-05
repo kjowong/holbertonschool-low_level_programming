@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 	int file_from, file_to, file_fread,
 	    file_write, file_close, file_fclose;
 	char *buffer;
-	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH;
+	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (argc != 3)
 	{
