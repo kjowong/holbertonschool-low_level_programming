@@ -20,8 +20,8 @@ Once cloned over, the repository will contain the following files:
 | 7-puts_half.c | Function that prints half of a string, followed by a new line |
 | 8-print_array.c | Function that prints `n` elements of an array of integers, followed by a new line |
 | 9-strcpy.c | Function that copies the string pointed to by `src`, including the null byte, to the buffer pointed to by `dest`. |
-| **100-atoi.c (TO-BE-ADDED) | Function that converts a string an integer** |
-| **101-keygen.c (TO-BE-ADDED) | Program that generates random valid passwords for the program 101-crackme** |
+| **100-atoi.c (TO-BE-ADDED)** | **Function that converts a string an integer** |
+| **101-keygen.c (TO-BE-ADDED)** | **Program that generates random valid passwords for the program 101-crackme** |
 
 ## How to Use
 There are two ways to use the C functions in your code.
