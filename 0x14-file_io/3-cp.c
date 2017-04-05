@@ -27,6 +27,11 @@ void close_error(int file)
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
 	exit(100);
 }
+/**
+  * check_args - function to return error if files are NULL
+  * @file: pointer to a file
+  * @file2: pointer to another file
+  */
 void check_args(char *file, char *file2)
 {
 	if (file == NULL || file2 == NULL)
@@ -43,7 +48,6 @@ int main(int argc, char *argv[])
 	int file_from, file_to, file_fread,
 	    file_write, file_close, file_fclose;
 	char *buffer;
-
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH;
 
 	if (argc != 3)
@@ -60,7 +64,7 @@ int main(int argc, char *argv[])
 		write_error(argv[2]);
 	buffer = malloc(sizeof(char) * BUFF_SIZE);
 	if (buffer == NULL)
-		return (0);
+		return (-1);
 	file_fread = read(file_from, buffer, BUFF_SIZE);
 	if (file_fread == -1)
 		return (-1);
