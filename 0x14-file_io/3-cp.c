@@ -59,6 +59,8 @@ int main(int argc, char *argv[])
 	if (file_to == -1)
 		write_error(argv[2]);
 	buffer = malloc(sizeof(char) * BUFF_SIZE);
+	if (buffer == NULL)
+		return (0);
 	file_fread = read(file_from, buffer, BUFF_SIZE);
 	if (file_fread == -1)
 		return (-1);
