@@ -5,7 +5,6 @@
   * print_numbers - prints numbers followed by newline
   * @separator: string between numbers
   * @n: takes in an int
-  *
   */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -20,12 +19,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (i != n - 1)
 		{
 			if (separator)
-			{
 				printf("%s", separator);
-			}
 		}
 	}
 	printf("\n");
 	va_end(valist);
-
 }

@@ -37,9 +37,7 @@ void print_string(char *str, va_list valist)
 
 	temp = va_arg(valist, char *);
 	if (temp == NULL)
-	{
 		temp = "(nil)";
-	}
 	printf("%s%s", str, temp);
 }
 /**
@@ -61,24 +59,18 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{NULL, NULL}
 	};
-
 	va_start(valist, format);
-
-	i = 0;
 	str = "";
-	while (format != NULL && format[i] != '\0')
+	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
-		j = 0;
-		while (p[j].c != NULL)
+		for (j = 0; p[j].c != NULL; j++)
 		{
 			if (format[i] == p[j].c[0])
 			{
 				p[j].f(str, valist);
 				str = ", ";
 			}
-			j++;
 		}
-		i++;
 	}
 	printf("\n");
 	va_end(valist);
