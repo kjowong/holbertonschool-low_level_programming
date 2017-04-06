@@ -10,9 +10,7 @@ size_t print_list(const list_t *h)
 	const list_t *walker = h;
 
 	if (walker == NULL)
-	{
 		return (0);
-	}
 	while (walker != NULL)
 	{
 		printf("[%d] %s\n", walker->len, walker->str);

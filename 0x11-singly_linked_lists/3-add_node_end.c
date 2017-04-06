@@ -10,9 +10,7 @@ int _strlen(const char *s)
 	int i = 0;
 
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 /**
@@ -28,9 +26,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	newNode = malloc(sizeof(list_t));
 	if (newNode == NULL)
-	{
 		return (NULL);
-	}
 	newNode->str = strdup(str);
 	if (newNode->str == NULL)
 	{
