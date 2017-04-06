@@ -12,9 +12,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	unsigned int i;
 
 	for (i = 0; i < n; i++)
-	{
 		dest[i] = src[i];
-	}
 	return (dest);
 }
 /**
@@ -41,14 +39,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 	if (new_size == old_size)
-	{
 		return (ptr);
-	}
 	p = malloc(new_size);
 	if (p == NULL)
-	{
 		return (NULL);
-	}
 	if (new_size < old_size)
 	{
 		num_copied = new_size;
