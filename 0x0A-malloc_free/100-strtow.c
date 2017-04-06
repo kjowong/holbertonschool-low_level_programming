@@ -10,9 +10,7 @@ int _strlen(char *s)
 	int i = 0;
 
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 /**
@@ -20,7 +18,6 @@ int _strlen(char *s)
   * @str: takes in string
   * Return: retusn a pointer to an array of strings(words)
   */
-
 char **strtow(char *str)
 {
 	char **nstr;
@@ -28,11 +25,6 @@ char **strtow(char *str)
 	int i;
 
 	if (str == NULL || str == "")
-	{
 		return (NULL);
-	}
 	nstr = malloc(sizeof(char *) * _strlen(str));
-
-
-
 }
