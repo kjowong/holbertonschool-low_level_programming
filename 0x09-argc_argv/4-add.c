@@ -11,10 +11,7 @@
   */
 int main(int argc, char *argv[])
 {
-	int i, j, result;
-
-
-	result = 0;
+	int i, j, result = 0;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -27,7 +24,6 @@ int main(int argc, char *argv[])
 					printf("Error\n");
 					return (1);
 				}
-
 			}
 		}
 		else
@@ -39,7 +35,6 @@ int main(int argc, char *argv[])
 					printf("Error\n");
 					return (1);
 				}
-
 			}
 		}
 		result += atoi(argv[i]);
