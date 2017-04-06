@@ -1,3 +1,5 @@
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 void _putchar(char c);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
@@ -11,3 +13,4 @@ int helper_julien(int x, int y);
 int helper_prime(int x, int y);
 int _check(char *s, int l);
 int wildcmp(char *s1, char *s2);
+#endif

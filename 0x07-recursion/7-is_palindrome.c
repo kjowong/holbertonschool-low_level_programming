@@ -11,35 +11,27 @@ int is_palindrome(char *s)
 	length = _strlen_recursion(s);
 
 	if (length <= 1)
-	{
 		return (1);
-	}
 	return (_check(s, length));
 }
-
 /**
   * _strlen_recursion - string length
   * @s: takes in string
   * Return: return string length func
   */
-
 int _strlen_recursion(char *s)
 {
 
 	if (*s == '\0')
-	{
 		return (0);
-	}
 	return (1 + _strlen_recursion(s + 1));
 }
-
 /**
   * _check - checks if palindrome
   * @s: takes in string
   * @l: length
   * Return: check if palindrome
   */
-
 int _check(char *s, int l)
 {
 	if (l <= 1)
@@ -54,6 +46,5 @@ int _check(char *s, int l)
 	{
 		return (_check(s + 1, l - 2));
 	}
-
 }
 

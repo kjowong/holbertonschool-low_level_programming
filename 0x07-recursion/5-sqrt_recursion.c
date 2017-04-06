@@ -8,7 +8,6 @@ int _sqrt_recursion(int n)
 {
 	return (helper_julien(1, n));
 }
-
 /**
   * helper_julien - helps to find square root
   * @x: takes in an integer

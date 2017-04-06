@@ -7,12 +7,9 @@
 int is_prime_number(int n)
 {
 	if (n == 1 || n < 0)
-	{
 		return (0);
-	}
 	return (helper_prime(2, n));
 }
-
 /**
   * helper_prime - helps find the prime number
   * @i: takes in an integer
