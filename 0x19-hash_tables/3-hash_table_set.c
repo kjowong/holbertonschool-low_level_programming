@@ -8,29 +8,23 @@
   */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	/* declare temp and new node */
 	hash_node_t *new_node, *ptr;
 	int index;
 
-	/* check if ht, key, value NULL as well as strlen */
 	if (ht == NULL || key == NULL || value == NULL || strlen(key) == 0)
 		return (0);
-	/* malloc for new_node */
 	new_node = malloc(sizeof(hash_node_t));
-	/* if new node is NULL, 0*/
 	if (new_node == NULL)
 		return (0);
-	/* get index of the key passed in */
 	index = key_index((unsigned char *)key, ht->size);
 	/* duplicate the key, value for the new_node */
 	new_node->key = strdup(key);
+	new_node->value = strdup(value);
 	/* set ptr to array */
 	ptr = ht->array[index];
 	/* check index for collisions */
 	if (ptr == NULL)
-	{
 		ptr = new_node;
-	}
 	else
 	{
 		while (ptr != NULL)
@@ -39,9 +33,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			if (strcmp(ptr->key, key) == 0)
 			{
 				free(new_node->key);
-				/* update the value */
+				free(ptr->value);
 				ptr->value = strdup(value);
 				free(new_node);
+			}
+			else
+			{
+				new_node->next = ptr;
+				new_node->key = strdup(key);
+				new_node->value = strdup(value);
+				ptr = new_node;
 			}
 		ptr = ptr->next;
 		}
