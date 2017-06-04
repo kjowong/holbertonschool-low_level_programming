@@ -31,21 +31,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
 	new_node->next = NULL;
-	/* set ptr to array */
-	/* check index for collisions */
 	if (ptr == NULL)
 		ptr = new_node;
 	else
 	{
-		while (ptr != NULL)
-		{
 		/* check if the key matches*/
-			new_node->next = ptr;
-			new_node->key = strdup(key);
-			new_node->value = strdup(value);
-			ptr = new_node;
-		}
-		ptr = ptr->next;
+		new_node->next = ptr;
+		ptr = new_node;
 	}
 	return (1);
 }
