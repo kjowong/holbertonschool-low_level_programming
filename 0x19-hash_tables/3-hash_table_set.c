@@ -13,15 +13,25 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || value == NULL || strlen(key) == 0)
 		return (0);
+	index = key_index((unsigned char *)key, ht->size);
+	ptr = ht->array[index];
+	while (ptr != NULL)
+	{
+		if (strcmp(ptr->key, key) == 0)
+		{
+			free(ptr->value);
+			ptr->value = strdup(value);
+			return (1);
+		}
+		ptr = ptr->next;
+	}
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 		return (0);
-	index = key_index((unsigned char *)key, ht->size);
-	/* duplicate the key, value for the new_node */
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
+	new_node->next = NULL;
 	/* set ptr to array */
-	ptr = ht->array[index];
 	/* check index for collisions */
 	if (ptr == NULL)
 		ptr = new_node;
@@ -30,22 +40,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		while (ptr != NULL)
 		{
 		/* check if the key matches*/
-			if (strcmp(ptr->key, key) == 0)
-			{
-				free(new_node->key);
-				free(ptr->value);
-				ptr->value = strdup(value);
-				free(new_node);
-			}
-			else
-			{
-				new_node->next = ptr;
-				new_node->key = strdup(key);
-				new_node->value = strdup(value);
-				ptr = new_node;
-			}
-		ptr = ptr->next;
+			new_node->next = ptr;
+			new_node->key = strdup(key);
+			new_node->value = strdup(value);
+			ptr = new_node;
 		}
+		ptr = ptr->next;
 	}
 	return (1);
 }
