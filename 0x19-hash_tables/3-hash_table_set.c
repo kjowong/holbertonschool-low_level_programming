@@ -36,13 +36,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	new_node->next = NULL;
-	if (ptr == NULL)
-		ptr = new_node;
+	if (ht->array[index] == NULL)
+		ht->array[index] = new_node;
 	else
 	{
 		/* check if the key matches*/
-		new_node->next = ptr;
-		ptr = new_node;
+		new_node->next = ht->array[index];
+		ht->array[index] = new_node;
 	}
 	return (1);
 }
