@@ -22,6 +22,6 @@ void swap_int(int *a, int *b);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void insertion_sort_list(listint_t **list);
-void swap_insertion(listint_t *pn, listint_t *temp, listint_t *nn);
+void swap_insert(listint_t *pn, listint_t *tmp, listint_t *nn, listint_t **l);
 
 #endif /* SORT_H */

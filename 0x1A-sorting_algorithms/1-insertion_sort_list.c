@@ -18,10 +18,7 @@ void insertion_sort_list(listint_t **list)
 		{
 			if (temp->n < pn->n)
 			{
-				swap_insertion(pn, temp, nn);
-				if ((*list)->prev)
-					*list = (*list)->prev;
-				print_list(*list);
+				swap_insert(pn, temp, nn, list);
 			}
 			temp = nn;
 			if (temp)
@@ -33,32 +30,36 @@ void insertion_sort_list(listint_t **list)
 	}
 }
 /**
- * swap_insertion - swaps integers with insertion form
+ * swap_insert - swaps integers with insertion form
  * @pn: previous node of linked list
- * @temp: node to be swapped
+ * @tmp: node to be swapped
  * @nn: next node of list
+ * @l: the head of the linked list
  */
-void swap_insertion(listint_t *pn, listint_t *temp, listint_t *nn)
+void swap_insert(listint_t *pn, listint_t *tmp, listint_t *nn, listint_t **l)
 {
 
-	while (pn && temp->n < pn->n)
+	while (pn && tmp->n < pn->n)
 	{
 		/* handle next node */
 		if (nn)
 			nn->prev = pn;
 
 		/* handle temp node */
-		temp->next = pn;
-		temp->prev = pn->prev;
+		tmp->next = pn;
+		tmp->prev = pn->prev;
 
 		/* handle prev node */
 		if (pn->prev)
-			(pn->prev)->next = temp;
-		pn->prev = temp;
+			(pn->prev)->next = tmp;
+		pn->prev = tmp;
 		pn->next = nn;
 
 		/* reset comparison values */
 		nn = pn;
-		pn = temp->prev;
+		pn = tmp->prev;
+		if ((*l)->prev)
+			*l = (*l)->prev;
+		print_list(*l);
 	}
 }
