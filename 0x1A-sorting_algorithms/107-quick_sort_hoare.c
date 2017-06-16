@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * quick_sort - sorts an array with quicksort algorithm
+ * quick_sort_hoare - sorts an array with quicksort Hoare algorithm
  * @array: array to be sorted
  * @size: size of the array
  */
