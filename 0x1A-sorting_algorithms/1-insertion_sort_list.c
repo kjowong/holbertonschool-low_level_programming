@@ -36,7 +36,7 @@ void insertion_sort_list(listint_t **list)
   * @head: the head of the linked list
   * Return: number of nodes in the list
   */
-size_t len_linkedList(listint_t *head)
+unsigned int len_linkedList(listint_t *head)
 {
 	listint_t *temp;
 	unsigned int i;
