@@ -8,9 +8,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *temp, *pn, *nn;
 
-	if (len_linkedList(*list) < 2)
-		return;
-	if (list && *list)
+	if (list && *list && (*list->next))
 	{
 		temp = (*list)->next;
 		pn = temp->prev;
@@ -31,26 +29,7 @@ void insertion_sort_list(listint_t **list)
 		}
 	}
 }
-/**
-  * len_linkedList - finds the length of the linked list
-  * @head: the head of the linked list
-  * Return: number of nodes in the list
-  */
-unsigned int len_linkedList(listint_t *head)
-{
-	listint_t *temp;
-	unsigned int i;
 
-	temp = head;
-	i = 0;
-
-	while (temp != NULL)
-	{
-		i++;
-		temp = temp->next;
-	}
-	return (i);
-}
 /**
  * swap_insert - swaps integers with insertion form
  * @pn: previous node of linked list
