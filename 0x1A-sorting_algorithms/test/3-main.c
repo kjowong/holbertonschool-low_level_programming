@@ -12,7 +12,7 @@ int main(void)
     int array[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
 	int array1[] = {19, 48};
     int array2[] = {19};
-    int array3[] = {86, 7};
+    int array3[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
     size_t n = sizeof(array) / sizeof(array[0]);
 
