@@ -25,4 +25,8 @@ void insertion_sort_list(listint_t **list);
 void swap_insert(listint_t *pn, listint_t *tmp, listint_t *nn, listint_t **l);
 void selection_sort(int *array, size_t size);
 
+/* quick sort v. 1 */
+void quick_sort(int *array, size_t size);
+void partition(int *wall, int *pivot, int *a, size_t s);
+
 #endif /* SORT_H */
