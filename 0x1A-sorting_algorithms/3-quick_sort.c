@@ -9,10 +9,13 @@ void quick_sort(int *array, size_t size)
 {
 	int *wall, *pivot;
 
-	pivot = array + (size - 1);
-	wall = array;
+	if (array && size)
+	{
+		pivot = array + (size - 1);
+		wall = array;
 
-	partition(wall, pivot, array, size);
+		partition(wall, pivot, array, size);
+	}
 }
 
 /**
@@ -33,11 +36,11 @@ void partition(int *wall, int *pivot, int *a, size_t s)
 	{
 		if (*i < *pivot)
 		{
-			/**
-			 * if (i != wall)
-			 */
-			swap_int(i, wall);
-			print_array(a, s);
+			if (i != wall)
+			{
+				swap_int(i, wall);
+				print_array(a, s);
+			}
 			i++;
 			wall++;
 		}
