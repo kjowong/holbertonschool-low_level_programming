@@ -33,18 +33,16 @@ void partition(int *wall, int *pivot, int *a, size_t s)
 	{
 		if (*i < *pivot)
 		{
-			if (i != wall)
-			{
-				swap_int(i, wall);
-				print_array(a, s);
-			}
+			/**
+			 * if (i != wall)
+			 */
+			swap_int(i, wall);
+			print_array(a, s);
 			i++;
 			wall++;
 		}
 		else
-		{
 			i++;
-		}
 		if (i == pivot)
 		{
 			if (wall != pivot)
