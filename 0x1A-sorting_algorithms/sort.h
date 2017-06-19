@@ -50,5 +50,7 @@ void swap_shell(int check, int prev, int gap, int *a);
 
 /* Merge Sort */
 void merge_sort(int *array, size_t size);
+void sort(int start, int end, int *a, int *copy);
+void merge(int start, int end, int *a, int *copy);
 
 #endif /* SORT_H */
