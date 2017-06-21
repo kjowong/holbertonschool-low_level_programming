@@ -16,11 +16,11 @@ void merge_sort(int *array, size_t size)
 	}
 }
 /**
-  * sort - sorting the subarrays
-  * @start: start of the subarray
-  * @end: end of the subarray
-  * @a: the original array
-  * @copy: copy of the original array
+  * sort - divides array in half recursively, until the array is size 1
+  * @start: start of the subarrray to be divided
+  * @end: end of the subarray to be divded
+  * @a: the original array for reference
+  * @copy: copy of the original array to help sort
   */
 void sort(int start, int end, int *a, int *copy)
 {
@@ -37,11 +37,11 @@ void sort(int start, int end, int *a, int *copy)
 	}
 }
 /**
-  * merge - merging the same arrays
-  * @start: start of the subarray
-  * @end: end of the subarray
-  * @a: the original array
-  * @copy: copy of the original array
+  * merge - merging of each half of an array into one sorted array
+  * @start: start of the subarray to be divided and sorted
+  * @end: end of the subarray to be divided and sorted
+  * @a: the original array for reference
+  * @copy: copy of the original array to help sort
   */
 void merge(int start, int end, int *a, int *copy)
 {
@@ -51,6 +51,8 @@ void merge(int start, int end, int *a, int *copy)
 	middle = ((start + end) / 2);
 	if ((start + end) % 2 == 1)
 		middle++;
+
+	/* print initiation */
 	printf("Merging...\n");
 	left = start;
 	printf("[left]: ");
@@ -58,30 +60,28 @@ void merge(int start, int end, int *a, int *copy)
 	right = middle;
 	printf("[right]: ");
 	print_array(a + right, (size_t)((end - middle) + 1));
+
 	tempi = 0;
-	while (left < middle || right <= end)
+	/* initiate merge loop to populate copy array */
+	while (left < middle && right <= end)
 	{
-		if (right > end)
-		{
-			while (left < middle)
-				copy[tempi++] = a[left++];
-			break;
-		}
-		if (left >= middle)
-		{
-			while (right <= end)
-				copy[tempi++] = a[right++];
-			break;
-		}
 		if (a[left] < a[right])
 			copy[tempi++] = a[left++];
 		else
 			copy[tempi++] = a[right++];
 	}
-	left = start;
+	while (left < middle)
+		copy[tempi++] = a[left++];
+	while (right <= end)
+		copy[tempi++] = a[right++];
+
+	/* copies copy array into main array sorted */
 	tempi = 0;
+	left = start;
 	while (tempi < tempsize)
 		a[left++] = copy[tempi++];
+
+	/* print completion statement */
 	printf("[Done]: ");
 	print_array(a + start, tempsize);
 }
