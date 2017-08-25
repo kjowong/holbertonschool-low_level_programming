@@ -22,6 +22,8 @@ int binary_search(int *array, size_t size, int value)
 	}
 	while (right >= left)
 	{
+		if (left == 0 && right == 0)
+			return (-1);
 		print_array(array, left, right);
 		middle = (right + left) / 2;
 		if (array[middle] == value)
