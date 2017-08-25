@@ -55,5 +55,5 @@ void print_array(int *array, size_t start, size_t end)
 	{
 		printf("%d, ", array[i]);
 	}
-	printf("%d\n", i);
+	printf("%d\n", array[end]);
 }
