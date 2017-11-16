@@ -17,12 +17,28 @@ Summary of what repository contains:
 | README.md   | Readme file           |
 | 0-linear.c      | function that searches for a value in an array using Linear Search         |
 | 1-binary.c     | function that searches for a value in a sorted array using Binary Search            |
-| 2-O | Space complexity |
-| 3-O     | Space complexity |
-| 4-O | Space complexity |
-| 5-O     | Space complexity |
-| 6-O     | Space complexity |
+| 2-O | Time complexity of basic linear search algorithm with array of size `n`|
+| 3-O     | Space complexity of basic linear search algorithm with array of size `n` |
+| 4-O | Time complexity of basic binary search algorithm with array of size `n`|
+| 5-O     | Space complexity of basic binary search algorithm with array of size `n` |
+| 6-O     | Space complexity of this function (see below) |
 | search_algos.h     | header file with functions prototypes |
+
+#### Function Example
+Space complexity `6-0` of this function:
+```C
+int **allocate_map(int n, int m)
+{
+     int **map;
+
+     map = malloc(sizeof(int *) * n);
+     for (size_t i = 0; i < n; i++)
+     {
+          map[i] = malloc(sizeof(int) * m);
+     }
+     return (map);
+}
+```
 
 ## How to Use
 ### How to use a functon in your code
